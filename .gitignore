@@ -21,3 +21,11 @@ docs/video/anim/out/
 docs/video/anim/public/narration/*.wav
 docs/video/narration/samples/
 docs/video/upload/*.mp4
+
+# --- local "second brain" files (Graphify + Obsidian workflow): generated or personal, not part of the public project ---
+graphify-out/
+.graphifyignore
+BRAINS.md
+Session_Logs.md
+vault/
+.gitattributes
