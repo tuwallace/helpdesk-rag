@@ -1,0 +1,9 @@
+# Segment 8: paste these into scripts/19_demo_repl.py one at a time (lines starting with # are notes).
+# 1. UNANSWERABLE: refused by the floor, ~0.3-0.6 s, no model call
+what time does the cafeteria open on fridays
+# 2. VALID but refused by the floor (refused 5 of 5 times in testing): this is the cost of the floor
+Every time I open the email app, it asks for my login details again, even though I've already entered them.
+# 3. ANSWERED normally (~2-3 s, cites ticket 794 in testing)
+outlok keeps askin me to sign in again on my macbook
+# Spare valid-but-refused question (refused 5 of 5): 
+the handheld guns wont upload what theyve picked

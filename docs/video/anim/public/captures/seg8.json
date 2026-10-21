@@ -1,0 +1,25 @@
+[
+ {
+  "question": "what time does the cafeteria open on fridays",
+  "answer": "I couldn't find a matching ticket in the help-desk history. Please open a new ticket.",
+  "sources": [],
+  "refused": "below_floor",
+  "seconds": 0.45
+ },
+ {
+  "question": "Every time I open the email app, it asks for my login details again, even though I've already entered them.",
+  "answer": "I couldn't find a matching ticket in the help-desk history. Please open a new ticket.",
+  "sources": [],
+  "refused": "below_floor",
+  "seconds": 0.63
+ },
+ {
+  "question": "outlok keeps askin me to sign in again on my macbook",
+  "answer": "The issue you're experiencing with Outlook prompting for a password on your MacBook is likely related to the macOS Sonoma update, as noted in [ticket 794]. The problem has been resolved, but it was previously limited to users on macOS Sonoma. Please ensure your system is up to date and check if the issue persists.",
+  "sources": [
+   794
+  ],
+  "refused": null,
+  "seconds": 3.14
+ }
+]

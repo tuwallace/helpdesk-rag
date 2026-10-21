@@ -1,0 +1,13 @@
+# Ollama runs on the HOST (Docker on macOS cannot reach the Apple GPU).
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    restart: unless-stopped
+    ports: ["127.0.0.1:6333:6333"]   # localhost only: Qdrant has no authentication
+    volumes: ["./data/qdrant:/qdrant/storage"]
+  phoenix:            # tracing UI + OTLP collector
+    image: arizephoenix/phoenix:latest
+    restart: unless-stopped
+    ports: ["127.0.0.1:6006:6006", "127.0.0.1:4317:4317"]   # localhost only: Phoenix has no authentication
+    volumes: ["./data/phoenix:/mnt/data"]
+    environment: ["PHOENIX_WORKING_DIR=/mnt/data"]

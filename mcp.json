@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "helpdesk-rag": {
+      "command": ".venv/bin/python",
+      "args": [
+        "-W",
+        "ignore",
+        "-m",
+        "rag.mcp_server"
+      ],
+      "env": {
+        "PYTHONPATH": "src"
+      }
+    }
+  }
+}

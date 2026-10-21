@@ -1,0 +1,488 @@
+{
+ "seg1": {
+  "audio": "narration/seg1.wav",
+  "duration": 28.05,
+  "sentences": [
+   {
+    "text": "I built a RAG system that runs entirely on my laptop.",
+    "start": 0.5,
+    "end": 4.575
+   },
+   {
+    "text": "It ended up with a retrieval score of ninety-five percent.",
+    "start": 4.925,
+    "end": 8.625
+   },
+   {
+    "text": "But the interesting part isn't what worked.",
+    "start": 8.975,
+    "end": 11.75
+   },
+   {
+    "text": "Three of the techniques everyone recommends, HyDE, fine-tuning, and a better embedding model, did nothing.",
+    "start": 12.1,
+    "end": 18.75
+   },
+   {
+    "text": "And one tiny bug in a tool definition cut my results by sixty percent.",
+    "start": 19.1,
+    "end": 24.3
+   },
+   {
+    "text": "Here's the whole story, with the numbers.",
+    "start": 24.65,
+    "end": 27.3
+   }
+  ]
+ },
+ "seg2": {
+  "audio": "narration/seg2.wav",
+  "duration": 53.05,
+  "sentences": [
+   {
+    "text": "The project is a help-desk assistant.",
+    "start": 0.5,
+    "end": 3.175
+   },
+   {
+    "text": "You describe an IT problem, and it searches past tickets and tells you what they say.",
+    "start": 3.525,
+    "end": 9.1
+   },
+   {
+    "text": "Everything is local on an M2 MacBook Pro.",
+    "start": 9.45,
+    "end": 12.85
+   },
+   {
+    "text": "Ollama runs the models: qwen3 eight-billion for generation and nomic for embeddings.",
+    "start": 13.2,
+    "end": 19.3
+   },
+   {
+    "text": "Qdrant is the vector database.",
+    "start": 19.65,
+    "end": 22.3
+   },
+   {
+    "text": "A cross-encoder reranks results.",
+    "start": 22.65,
+    "end": 25.275
+   },
+   {
+    "text": "Phoenix traces every step.",
+    "start": 25.625,
+    "end": 27.9
+   },
+   {
+    "text": "And at the end, ollmcp lets a local model decide when to search.",
+    "start": 28.25,
+    "end": 33.65
+   },
+   {
+    "text": "The data is a synthetic ticket dataset from Hugging Face, a thousand tickets in the free sample.",
+    "start": 34.0,
+    "end": 40.15
+   },
+   {
+    "text": "Here is the path a question takes.",
+    "start": 40.5,
+    "end": 42.925
+   },
+   {
+    "text": "It gets rewritten, then searched two ways at once, then grouped into distinct problems, reranked, filtered, and only then handed to the model.",
+    "start": 43.275,
+    "end": 52.3
+   }
+  ]
+ },
+ "seg3": {
+  "audio": "narration/seg3.wav",
+  "duration": 31.675,
+  "sentences": [
+   {
+    "text": "First surprise.",
+    "start": 0.5,
+    "end": 2.25
+   },
+   {
+    "text": "A thousand tickets, but only fifty-six distinct problems.",
+    "start": 2.6,
+    "end": 6.65
+   },
+   {
+    "text": "Each one is repeated ten to thirty times with different names attached.",
+    "start": 7.0,
+    "end": 11.775
+   },
+   {
+    "text": "The comments are even worse: twenty-four distinct sentences, attached to tickets more or less at random.",
+    "start": 12.125,
+    "end": 18.575
+   },
+   {
+    "text": "And there is no real resolution field, so I can't trust any of it as a fix.",
+    "start": 18.925,
+    "end": 24.05
+   },
+   {
+    "text": "It's a ticket search and triage tool.",
+    "start": 24.4,
+    "end": 26.975
+   },
+   {
+    "text": "That one fact shaped almost every decision after this.",
+    "start": 27.325,
+    "end": 30.925
+   }
+  ]
+ },
+ "seg4": {
+  "audio": "narration/seg4.wav",
+  "duration": 29.8,
+  "sentences": [
+   {
+    "text": "I searched for \"printer\" with three methods: embeddings, keyword search, and the two combined.",
+    "start": 0.5,
+    "end": 6.0
+   },
+   {
+    "text": "Every single result, in all three, was the same problem: label printer feeds blank stock.",
+    "start": 6.35,
+    "end": 12.375
+   },
+   {
+    "text": "But the data has three different printer problems.",
+    "start": 12.725,
+    "end": 15.9
+   },
+   {
+    "text": "The biggest cluster of near-duplicates filled the whole top of the list, and I'd never have known the other two existed.",
+    "start": 16.25,
+    "end": 23.025
+   },
+   {
+    "text": "Averages would have hidden this.",
+    "start": 23.375,
+    "end": 25.575
+   },
+   {
+    "text": "I only saw it by reading the actual results.",
+    "start": 25.925,
+    "end": 29.05
+   }
+  ]
+ },
+ "seg5": {
+  "audio": "narration/seg5.wav",
+  "duration": 45.525,
+  "sentences": [
+   {
+    "text": "The fix was to stop retrieving tickets and start retrieving distinct problems.",
+    "start": 0.5,
+    "end": 5.725
+   },
+   {
+    "text": "Qdrant can group by a field, so I asked for the top twenty different summaries.",
+    "start": 6.075,
+    "end": 11.05
+   },
+   {
+    "text": "The chance that the right problem was even in the candidate pool jumped from seventy-four to ninety-five percent.",
+    "start": 11.4,
+    "end": 18.225
+   },
+   {
+    "text": "Then a cross-encoder reranker, reading the question and each summary together, took the right answer in the top five from about seventy to ninety-five percent.",
+    "start": 18.575,
+    "end": 28.3
+   },
+   {
+    "text": "One lesson inside that: reranking on the short summary beat reranking on the full ticket text, because the full text had random noise attached to it.",
+    "start": 28.65,
+    "end": 38.25
+   },
+   {
+    "text": "The real lesson: retrieval can't recover what it never fetched, so measure each stage separately.",
+    "start": 38.6,
+    "end": 44.775
+   }
+  ]
+ },
+ "seg6": {
+  "audio": "narration/seg6.wav",
+  "duration": 43.35,
+  "sentences": [
+   {
+    "text": "Now the things that didn't work.",
+    "start": 0.5,
+    "end": 2.725
+   },
+   {
+    "text": "HyDE, where the model writes a fake answer to search with: no gain, and it got worse when I let it replace the question.",
+    "start": 3.075,
+    "end": 10.25
+   },
+   {
+    "text": "Fine-tuning the embedding model: it trained fine, and changed nothing, because the untouched model was already finding the right answer.",
+    "start": 10.6,
+    "end": 19.325
+   },
+   {
+    "text": "Switching to a better embedder: dramatically better on its own, and exactly the same once the reranker was in the pipeline.",
+    "start": 19.675,
+    "end": 27.55
+   },
+   {
+    "text": "The reranker erased the difference.",
+    "start": 27.9,
+    "end": 30.225
+   },
+   {
+    "text": "And a score cutoff I'd tuned by eye was silently throwing away correct results.",
+    "start": 30.575,
+    "end": 35.9
+   },
+   {
+    "text": "Components interact.",
+    "start": 36.25,
+    "end": 38.2
+   },
+   {
+    "text": "A win in isolation doesn't predict a win in the system.",
+    "start": 38.55,
+    "end": 42.6
+   }
+  ]
+ },
+ "seg7": {
+  "audio": "narration/seg7.wav",
+  "duration": 50.225,
+  "sentences": [
+   {
+    "text": "How do you know any of this is real?",
+    "start": 0.5,
+    "end": 2.775
+   },
+   {
+    "text": "My first set of test questions was too easy: the model had paraphrased the ticket titles, and everything scored near perfect.",
+    "start": 3.325,
+    "end": 11.325
+   },
+   {
+    "text": "Useless.",
+    "start": 11.675,
+    "end": 13.15
+   },
+   {
+    "text": "Then I had a result that said ninety-five percent, and it was computed on only nineteen questions.",
+    "start": 13.5,
+    "end": 19.85
+   },
+   {
+    "text": "One question is worth five points.",
+    "start": 20.2,
+    "end": 22.8
+   },
+   {
+    "text": "To be confident one system really beats another, and isn't just lucky, you'd want something like six wins and no losses, not one win.",
+    "start": 23.15,
+    "end": 31.65
+   },
+   {
+    "text": "And if you see nineteen out of nineteen, the real failure rate could still be sixteen percent.",
+    "start": 32.0,
+    "end": 37.85
+   },
+   {
+    "text": "I wrote a guide on reading these numbers, and I'll link it.",
+    "start": 38.2,
+    "end": 41.6
+   },
+   {
+    "text": "One more thing I have to be upfront about: I tuned on the same questions I scored on, so these numbers are optimistic.",
+    "start": 41.95,
+    "end": 49.475
+   }
+  ]
+ },
+ "seg8": {
+  "audio": "narration/seg8.wav",
+  "duration": 44.975,
+  "sentences": [
+   {
+    "text": "The scariest failure in RAG is the confident wrong answer.",
+    "start": 0.5,
+    "end": 4.625
+   },
+   {
+    "text": "So I added a floor on the reranker score.",
+    "start": 4.975,
+    "end": 7.775
+   },
+   {
+    "text": "Below it, the system doesn't even call the model.",
+    "start": 8.125,
+    "end": 11.275
+   },
+   {
+    "text": "It says there's no match and suggests opening a ticket, and that path takes under half a second.",
+    "start": 11.625,
+    "end": 17.55
+   },
+   {
+    "text": "In my tests it refused all seven questions it couldn't answer.",
+    "start": 17.9,
+    "end": 22.275
+   },
+   {
+    "text": "The cost: it also wrongly refused three of nineteen valid questions, about sixteen percent.",
+    "start": 22.625,
+    "end": 28.8
+   },
+   {
+    "text": "That's a trade-off you choose, not a bug you fix.",
+    "start": 29.15,
+    "end": 32.375
+   },
+   {
+    "text": "And I broke it once: I told the model to reply \"no match\" when unsure, and it refused eight of nineteen good questions.",
+    "start": 32.725,
+    "end": 40.525
+   },
+   {
+    "text": "Small models take instructions very literally.",
+    "start": 40.875,
+    "end": 44.225
+   }
+  ]
+ },
+ "seg9": {
+  "audio": "narration/seg9.wav",
+  "duration": 32.925,
+  "sentences": [
+   {
+    "text": "Tracing shows where the time goes.",
+    "start": 0.5,
+    "end": 2.95
+   },
+   {
+    "text": "In a warm run it takes a few seconds, and the generator is roughly three quarters of that.",
+    "start": 3.3,
+    "end": 9.0
+   },
+   {
+    "text": "The query rewrite is about a fifth, and retrieval plus reranking barely register.",
+    "start": 9.35,
+    "end": 14.75
+   },
+   {
+    "text": "The first run after a cold start is slower, because the models have to load.",
+    "start": 15.1,
+    "end": 20.075
+   },
+   {
+    "text": "So if you want this faster, shrink the context or the model.",
+    "start": 20.425,
+    "end": 24.3
+   },
+   {
+    "text": "Don't optimize the retrieval.",
+    "start": 24.65,
+    "end": 26.95
+   },
+   {
+    "text": "Caveat: that's three traces, so treat the percentages as illustrative.",
+    "start": 27.3,
+    "end": 32.175
+   }
+  ]
+ },
+ "seg10": {
+  "audio": "narration/seg10.wav",
+  "duration": 40.5,
+  "sentences": [
+   {
+    "text": "Last piece: ollmcp lets a local model decide when to search.",
+    "start": 0.5,
+    "end": 5.875
+   },
+   {
+    "text": "I exposed my pipeline as one tool.",
+    "start": 6.225,
+    "end": 8.925
+   },
+   {
+    "text": "In my tests it used the tool for all nineteen IT questions and none of the six chit-chat prompts.",
+    "start": 9.275,
+    "end": 15.9
+   },
+   {
+    "text": "But the first test found only six of nineteen correct tickets, versus sixteen in the pipeline.",
+    "start": 16.25,
+    "end": 22.375
+   },
+   {
+    "text": "The reason: the model was filling in an optional priority filter on every call, with a value nobody asked for, and that hid the right tickets.",
+    "start": 22.725,
+    "end": 31.85
+   },
+   {
+    "text": "I deleted the parameter and the results matched.",
+    "start": 32.2,
+    "end": 35.575
+   },
+   {
+    "text": "If you build tools for small models, keep the schema minimal.",
+    "start": 35.925,
+    "end": 39.75
+   }
+  ]
+ },
+ "seg11": {
+  "audio": "narration/seg11.wav",
+  "duration": 37.025,
+  "sentences": [
+   {
+    "text": "Five things.",
+    "start": 0.5,
+    "end": 2.15
+   },
+   {
+    "text": "One: read your data before you pick techniques.",
+    "start": 2.5,
+    "end": 5.625
+   },
+   {
+    "text": "Two: measure every stage, because the pool limits everything after it.",
+    "start": 5.975,
+    "end": 10.65
+   },
+   {
+    "text": "Three: test components in the full system, not alone.",
+    "start": 11.0,
+    "end": 14.775
+   },
+   {
+    "text": "Four: report your sample size and be honest about tuning on your test set.",
+    "start": 15.125,
+    "end": 20.075
+   },
+   {
+    "text": "And five: decide up front which error costs more, wrong answers or refusals.",
+    "start": 20.425,
+    "end": 25.8
+   },
+   {
+    "text": "The code, commands, and the number-reading guide are linked below.",
+    "start": 26.15,
+    "end": 30.25
+   },
+   {
+    "text": "If you want a follow-up where I test this on questions I wrote blind, say so in the comments.",
+    "start": 30.6,
+    "end": 36.275
+   }
+  ]
+ }
+}

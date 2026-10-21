@@ -1,0 +1,12 @@
+[
+ {"summary": "MFA push not arriving on replacement phone.", "kind": "symptom-only", "question": "the login approval prompts never show up since I got a new handset"},
+ {"summary": "Outlook keeps prompting for password on Mac.", "kind": "typo", "question": "outlok keeps askin me to sign in again on my macbook"},
+ {"summary": "Warehouse scanner will not sync picks to WMS.", "kind": "slang", "question": "the handheld guns wont upload what theyve picked"},
+ {"summary": "BitLocker recovery key prompt appears at boot.", "kind": "synonym", "question": "laptop demands a long recovery code every time it starts up"},
+ {"summary": "Power BI refresh failing after service account rotation.", "kind": "indirect", "question": "dashboards stopped updating right after the service login password got changed"},
+ {"summary": "Customer portal SSO redirects to blank page.", "kind": "symptom-only", "question": "customers see an empty white page after signing in through the portal"},
+ {"summary": "Mailbox forwarding rule recreated after removal.", "kind": "paraphrase-hard", "question": "someone keeps re-adding an auto-forward to my inbox even though I took it off"},
+ {"summary": "Shared mailbox permissions disappeared overnight.", "kind": "vague", "question": "nobody on my team can open the team mailbox since yesterday"},
+ {"summary": "VPN disconnects every 15 minutes on hotel Wi-Fi.", "kind": "synonym", "question": "corporate network access drops every quarter hour when I travel"},
+ {"summary": "Spam burst hit shared support inbox this morning.", "kind": "vague", "question": "huge flood of junk mail into the help address today"}
+]

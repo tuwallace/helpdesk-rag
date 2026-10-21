@@ -1,0 +1,23 @@
+# --- environments and dependencies (large; recreate with `uv sync` and `npm install`) ---
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+
+# --- local config, editor and OS files ---
+.env
+.claude/
+.DS_Store
+._*
+*.log
+
+# --- data, indexes and model artifacts (regenerate with the scripts) ---
+# The dataset is CC-BY-NC-4.0: fetch it with scripts/00_download.py instead of redistributing it.
+data/*
+!data/.gitkeep
+
+# --- rendered / generated media (regenerate with docs/video/anim and docs/video/narration) ---
+docs/video/anim/out/
+docs/video/anim/public/narration/*.wav
+docs/video/narration/samples/
+docs/video/upload/*.mp4

@@ -1,0 +1,29 @@
+
+  query: "printer"   (top 5 tickets from each method)
+
+  dense (embeddings)
+     191  Label printer feeds blank stock after maintenance.
+     128  Label printer feeds blank stock after maintenance.
+     317  Label printer feeds blank stock after maintenance.
+     558  Label printer feeds blank stock after maintenance.
+     941  Label printer feeds blank stock after maintenance.
+  bm25 (keywords)
+     973  Label printer feeds blank stock after maintenance.
+     994  Label printer feeds blank stock after maintenance.
+     191  Label printer feeds blank stock after maintenance.
+     261  Label printer feeds blank stock after maintenance.
+     788  Label printer feeds blank stock after maintenance.
+  hybrid (both)
+     191  Label printer feeds blank stock after maintenance.
+     973  Label printer feeds blank stock after maintenance.
+     128  Label printer feeds blank stock after maintenance.
+     994  Label printer feeds blank stock after maintenance.
+     317  Label printer feeds blank stock after maintenance.
+
+  distinct problems in these 15 results: 1
+
+  printer problems that actually exist in the data:
+     23 tickets  Label printer feeds blank stock after maintenance.
+     12 tickets  Printer on dock 4 is stuck in offline state.
+     11 tickets  New Zebra printer not visible to shipping station.
+

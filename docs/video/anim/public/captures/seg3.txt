@@ -1,0 +1,12 @@
+
+  tickets                            1,000
+  distinct problems (summaries)         56
+  tickets per problem             10 to 28
+  comments                           2,000
+  distinct comment sentences            24
+
+  most repeated comments (attached to tickets at random):
+    102x  Found stale token in local credential manager.
+     99x  Issue now limited to users on macOS Sonoma.
+     97x  Closing after three business days without reply.
+

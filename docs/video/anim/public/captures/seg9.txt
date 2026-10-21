@@ -1,0 +1,34 @@
+answered     outlok keeps askin me to sign in again on my macbook
+answered     corporate network access drops every quarter hour when I tra
+below_floor  what time does the cafeteria open on fridays
+
+17 spans in 3 traces
+
+trace: 'outlok keeps askin me to sign in again on my macbook'  total=6.67s  refused=None
+    rag.answer                   6.67s   100%
+    pre.rewrite                  1.83s    27%
+    retrieve.hybrid_grouped      0.40s     6%
+    embed                        0.28s     4%
+    rerank.cross_encoder         1.52s    23%
+    generate                     2.92s    44%
+trace: 'corporate network access drops every quarter hour when '  total=3.03s  refused=None
+    rag.answer                   3.03s   100%
+    pre.rewrite                  0.52s    17%
+    retrieve.hybrid_grouped      0.04s     1%
+    embed                        0.03s     1%
+    rerank.cross_encoder         0.08s     3%
+    generate                     2.39s    79%
+trace: 'what time does the cafeteria open on fridays'  total=0.42s  refused=below_floor
+    rag.answer                   0.42s   100%
+    pre.rewrite                  0.33s    78%
+    retrieve.hybrid_grouped      0.03s     6%
+    embed                        0.01s     3%
+    rerank.cross_encoder         0.07s    16%
+
+mean latency by stage (all traces)
+  rag.answer                 n= 3  mean=3.37s
+  generate                   n= 2  mean=2.65s
+  pre.rewrite                n= 3  mean=0.89s
+  rerank.cross_encoder       n= 3  mean=0.56s
+  retrieve.hybrid_grouped    n= 3  mean=0.16s
+  embed                      n= 3  mean=0.11s

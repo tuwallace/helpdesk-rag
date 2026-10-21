@@ -1,0 +1,7 @@
+# Segment 10: type these into ollmcp one at a time.
+# 1. IT problem -> should call helpdesk-rag.search_tickets (no priority argument) and cite a ticket
+outlok keeps askin me to sign in again on my macbook
+# 2. Not a search question -> should answer directly (391) WITHOUT calling the tool
+what is 17 times 23?
+# 3. Optional: unanswerable -> may call the tool, gets 'no matching tickets', should say so and suggest a new ticket
+how many vacation days do I have left this year

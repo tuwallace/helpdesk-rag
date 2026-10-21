@@ -1,0 +1,34 @@
+I built a help-desk RAG that runs entirely on a MacBook: Ollama (qwen3:8b + nomic-embed-text), Qdrant, a cross-encoder reranker,
+Arize Phoenix tracing, and ollmcp. This is what worked, what didn't (HyDE, fine-tuning, a better embedder), and how I checked.
+Code + full write-up: https://github.com/tuwallace/helpdesk-rag
+
+0:00 Hook
+0:27 What I built
+1:20 The data twist
+1:51 The "printer" problem
+2:20 The fix: grouped pool + reranking
+3:05 What didn't work
+3:47 Evaluating honestly
+4:37 Knowing when to say "I don't know"
+5:21 Tracing: where the time goes
+5:54 ollmcp: a local model uses the tool
+6:34 Takeaways
+
+HOW TO READ THE NUMBERS
+All results come from 19 in-scope and 7 out-of-scope test questions, and I tuned the pipeline on those same questions, so treat them as
+illustrations, not benchmarks. The data is synthetic.
+
+ABOUT THIS VIDEO
+- Narration is a synthetic (AI-generated) voice, made with Kokoro-82M.
+- The terminal segments (data twist, printer problem, "I don't know", tracing, ollmcp) are replays of real captured output, not live screen recordings.
+  The Phoenix tracing screenshot and the ollmcp transcript are from real runs.
+- Animations were built with Remotion.
+
+CREDITS
+Dataset: mindweave/help-desk-tickets on Hugging Face (synthetic, license CC-BY-NC-4.0, non-commercial).
+Tools: Ollama, Qdrant, Arize Phoenix, sentence-transformers, FastMCP, ollmcp.
+
+CODE AND NOTES
+Repository: https://github.com/tuwallace/helpdesk-rag
+How to read the numbers: https://github.com/tuwallace/helpdesk-rag/blob/main/docs/reading-the-numbers.md
+Every command used in this video: https://github.com/tuwallace/helpdesk-rag/blob/main/docs/commands.md

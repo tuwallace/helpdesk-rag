@@ -1,0 +1,1 @@
+RAG, local LLM, Ollama, Qdrant, reranking, HyDE, fine-tuning, embeddings, MCP, ollmcp, AI engineering, evaluation
