@@ -81,6 +81,12 @@ Then ask a non-search question, such as "what's 2+2", and confirm it does **not*
 - Try adding filters (`priority="P1"`, `category_id=3`), and test a question like "any P1 outages last month?". Pure semantic search handles that badly, which motivates metadata filtering and, in a later step, text-to-SQL for aggregate questions.
 - Code was only syntax-checked; nothing has been downloaded or run. Expect small fixes on the first run, such as CSV file names.
 
+## The companion video
+
+The project is also the subject of a YouTube video about what worked and what did not. Its script, animation project, narration tooling and upload
+files are in [`docs/video`](docs/video/README.md) (optional; the project does not depend on it). Command-by-command details for everything in this
+repository are in [`docs/commands.md`](docs/commands.md), and [`docs/reading-the-numbers.md`](docs/reading-the-numbers.md) explains how to judge the results.
+
 ## Data and licenses
 
 - **Dataset:** [mindweave/help-desk-tickets](https://huggingface.co/datasets/mindweave/help-desk-tickets) on Hugging Face (synthetic IT tickets), licensed **CC-BY-NC-4.0**: attribution required, **non-commercial use only**. The data is not stored in this repository; `scripts/00_download.py` fetches it into `data/raw/`. The small files in `eval/` (golden questions and the train/test split) are derived from it and carry the same terms.
