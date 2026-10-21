@@ -1,5 +1,7 @@
 # Companion video: tooling and sources
 
+**Watch the video: https://youtu.be/iZwTJmpY7Jg**
+
 This folder holds everything used to make the YouTube video about this project ("I built a local RAG. Most of my best ideas failed."). It is
 optional: the RAG project itself does not depend on any of it. Rendered audio and video are **not** committed (they are large and
 regenerable); this folder has the sources and the scripts to rebuild them.

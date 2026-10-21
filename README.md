@@ -83,6 +83,8 @@ Then ask a non-search question, such as "what's 2+2", and confirm it does **not*
 
 ## The companion video
 
+**Watch the video: https://youtu.be/iZwTJmpY7Jg**
+
 The project is also the subject of a YouTube video about what worked and what did not. Its script, animation project, narration tooling and upload
 files are in [`docs/video`](docs/video/README.md) (optional; the project does not depend on it). Command-by-command details for everything in this
 repository are in [`docs/commands.md`](docs/commands.md), and [`docs/reading-the-numbers.md`](docs/reading-the-numbers.md) explains how to judge the results.
